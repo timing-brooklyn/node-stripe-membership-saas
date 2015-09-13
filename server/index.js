@@ -40,6 +40,8 @@ var corsOptions = {
 
 // express setup
 var app = express();
+console.log('QQQ: app: ', app);
+console.log('QQQ: app: env: ', app.get('env'));
 
 if (app.get('env') === 'production') {
   app.locals.production = true;
