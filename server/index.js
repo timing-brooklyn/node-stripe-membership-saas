@@ -26,6 +26,8 @@ var corsOptions = {
 };
 var staticDir;
 
+console.log('QQQ: secrets', secrets);
+
 // setup db
 mongoose.connect(secrets.db);
 mongoose.connection.on('error', function() {

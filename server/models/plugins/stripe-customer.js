@@ -57,8 +57,9 @@ module.exports = exports = function stripeCustomer (schema, options) {
       if(!user.stripe.customerId){
         user.stripe.customerId = customer.id;
       }
-
-      var card = customer.cards.data[0];
+        console.log('qqq', customer);
+        //console.log('qqq', customer.cards);
+      var card = customer.sources.data[0];
       user.stripe.last4 = card.last4;
       user.save(function(err){
         if (err) return cb(err);
